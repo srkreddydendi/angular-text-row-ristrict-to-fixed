@@ -10,20 +10,20 @@ export class AppComponent {
   finalText = "";
   ouput = "";
   colLenght = 22;
-  k:number = 0;
+  //k:number = 0;
   print() {
-    
+    let k=0;
     for (let i = 0; i < this.name.length; i++) {
       //  console.log(this.name);
       //  console.log(k);
 
-      if (this.k == 22) {
+      if (k == 22) {
         //  k=0;
-        console.log(this.k);
-        console.log(this.name);
-        this.k = 0;
+        console.log(k);
+        console.log(name);
+        k = 0;
       } else {
-        this.k=i;
+        k=i;
       }
     }
   }
