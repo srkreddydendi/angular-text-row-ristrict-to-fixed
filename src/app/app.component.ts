@@ -13,31 +13,34 @@ export class AppComponent {
   //k:number = 0;
   print() {
     let k=0;
-    let line =0;
-    for (let i = 0; i < this.name.length; i++) {
+    let line =1;
+    let localName = this.name;
+    for (let i = 0; i < localName.length ; i++) {
       //  console.log(this.name);
       //  console.log(k);
 
-      if (k == 22) {
+      if (i == line*22) {
         //  k=0;
         line ++;
-        if(this.name.charAt(i)!= " "){
+        if(localName.charAt(i)!= " "){
+             console.log(i);
+      
           debugger
-          let lastIndex = this.name.lastIndexOf(" ");
-
-          this.name = this.name.substring(0, lastIndex-1)+ "\n" + this.name.substring(lastIndex, this.name.length);
+          let lastIndex = localName.lastIndexOf(" ");
           
-
-        }else{
-          this.name.concat("\n");
-        }
-        this.finalText = this.name;
-        console.log(k);
-        console.log(name);
-        k = 0;
-      } else {
-        k=i;
-      }
+          localName = localName.substring(0, lastIndex)+ "X" + localName.substring(lastIndex, localName.length);
+          
+        console.log("nameee " + localName);
+        }//else{
+         // this.name.concat("\n");
+       // }
+        //this.finalText = this.name;
+       // console.log(k);
+     //   console.log(name);
+      //  k = 0;
+      }// else {
+       // k=i;
+      //}
     }
   }
 }
