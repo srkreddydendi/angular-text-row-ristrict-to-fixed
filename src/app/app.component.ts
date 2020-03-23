@@ -13,15 +13,20 @@ export class AppComponent {
   //k:number = 0;
   print() {
     let k=0;
+    let line =0;
     for (let i = 0; i < this.name.length; i++) {
       //  console.log(this.name);
       //  console.log(k);
 
       if (k == 22) {
         //  k=0;
-        if(this.name.charAt(i)!= ""){
+        line ++;
+        if(this.name.charAt(i)!= " "){
+          debugger
           let lastIndex = this.name.lastIndexOf(" ");
-          this.name.substring(0, lastIndex-1)+ "\n" + this.name.substring(lastIndex, this.name.length);
+
+          this.name = this.name.substring(0, lastIndex-1)+ "\n" + this.name.substring(lastIndex, this.name.length);
+          
 
         }else{
           this.name.concat("\n");
