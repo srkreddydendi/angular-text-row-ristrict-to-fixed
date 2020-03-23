@@ -15,22 +15,23 @@ export class AppComponent {
     let k=0;
     let line =1;
     let localName = this.name;
-    for (let i = 0; i < localName.length ; i++) {
-      //  console.log(this.name);
-      //  console.log(k);
+    for (var i = 0; i < localName.length ; i++) {
+       // console.log("i=  "+ i);
+        
 
-      if (i == line*22) {
+      if (i === line*22) {
+        console.log(i+ " "+ line*22+ " " + (i == line*22));
         //  k=0;
-        line ++;
+        line ++;console.log(i + " "+ localName.charAt(i)!= " ");
         if(localName.charAt(i)!= " "){
-             console.log(i);
+             
       
           debugger
           let lastIndex = localName.lastIndexOf(" ");
           
           localName = localName.substring(0, lastIndex)+ "X" + localName.substring(lastIndex, localName.length);
           
-        console.log("nameee " + localName);
+     //   console.log("nameee " + localName);
         }//else{
          // this.name.concat("\n");
        // }
