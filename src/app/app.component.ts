@@ -32,7 +32,8 @@ export class AppComponent {
           debugger
           let lastIndex = localName.substring(0, line*22).lastIndexOf(" ");
           
-          finalText = finalText+  localName.substring(line-1, lastIndex)+ "X" + localName.substring(lastIndex, localName.length);
+          
+         finalText = finalText+  localName.substring(line-1, lastIndex)+ "X" + localName.substring(lastIndex, localName.length);
            line ++;
         console.log("nameee " + finalText);
         }//else{
