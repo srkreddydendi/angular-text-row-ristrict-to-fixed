@@ -26,13 +26,13 @@ export class AppComponent {
          let index =  localName.substring(i-22, i).lastIndexOf(" ")
           let subStr = localName.substring(i-22, index).concat("X") + localName.substring(index, i);
          // for(let s in subStr){
-           finalText.concat(subStr)
+           finalText= finalText + subStr;
           //}
           //subStr[subStr.length-2].concat("X")
           console.log();
 
         } else {
-          finalText = finalText.concat(localName.substring(i-22, i).concat("X"));
+          finalText = finalText+ (localName.substring(i-22, i).concat("X"));
         }
         //this.finalText = this.name;
         // console.log(k);
