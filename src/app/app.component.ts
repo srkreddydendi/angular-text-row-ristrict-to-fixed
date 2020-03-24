@@ -21,18 +21,22 @@ export class AppComponent {
       // console.log("i=  "+ i);
 
       if (i === line * 22) {
+        line++;
         if (localName.charAt(i) != " ") {
           debugger
-         let index =  localName.substring(i-22, i).lastIndexOf(" ")
-          let subStr = localName.substring(i-22, index).concat("X") + localName.substring(index, i);
+         let str =  localName.substring(i-22, i);
+         var index = str.lastIndexOf(" ")
+         let a = localName.substring(i-22, index)
+         let b = localName.substring(index, i)
+          let subStr = a+ "X" + b;
          // for(let s in subStr){
            finalText= finalText + subStr;
           //}
           //subStr[subStr.length-2].concat("X")
-          console.log();
+        //  console.log(subStr);
 
         } else {
-          finalText = finalText+ (localName.substring(i-22, i).concat("X"));
+        //  finalText = finalText+ (localName.substring(i-22, i).concat("X"));
         }
         //this.finalText = this.name;
         // console.log(k);
