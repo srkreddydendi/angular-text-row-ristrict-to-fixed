@@ -19,33 +19,43 @@ export class AppComponent {
     localName = localName.replace(/\s/g, " ")
     for (var i = 0; i < localName.length ; i++) {
        // console.log("i=  "+ i);
-        
-
+     
       if (i === line*22) {
       //  console.log(i+ " "+ line*22+ " " + (i == line*22));
         //  k=0;
        
       //  console.log(i + " "+ localName.charAt(i)!= " ");
         if(localName.charAt(i)!= " "){
-             
+          let spaceIndex = 0
+
+            /* for(let j=0;j< i;j++){
+                if(localName.charAt[j] ==" "){
+                    spaceIndex = j;
+                }
+             }*/
       
-          debugger
-          let lastIndex = localName.substring(0, line*22).lastIndexOf(" ");
+        //  debugger
+          let lastIndex = localName.lastIndexOf(" ");
           
           
-         finalText = finalText+  localName.substring(line-1, lastIndex)+ "X" + localName.substring(lastIndex, localName.length);
+         finalText =   finalText.substring(0, lastIndex)+ "X" + localName.substring(lastIndex, localName.length);
            line ++;
         console.log("nameee " + finalText);
-        }//else{
-         // this.name.concat("\n");
-       // }
+        }else{
+        finalText =  finalText + "\n";
+        }
         //this.finalText = this.name;
        // console.log(k);
      //   console.log(name);
       //  k = 0;
-      }// else {
+      } else {
        // k=i;
-      //}
+       if(localName.charAt(line*22)!= " "){
+
+       }
+        finalText = finalText + localName.charAt(i);  
+
+      }
     }
   }
 }
